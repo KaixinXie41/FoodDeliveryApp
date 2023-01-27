@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/_10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
+        android:id="@+id/imgVeg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/mealQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_20sp"
+        tools:text = "@string/num"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/imgVeg"
+        app:layout_constraintBottom_toBottomOf="@id/imgVeg"
+        app:layout_constraintStart_toEndOf="@id/imgVeg"
+        android:layout_marginStart="@dimen/_20dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_multiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/multiple"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintTop_toTopOf="@id/imgVeg"
+        app:layout_constraintBottom_toBottomOf="@id/imgVeg"
+        app:layout_constraintStart_toEndOf="@id/mealQuantity"
+        android:layout_marginStart="@dimen/_10dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_order_meal_name"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/meal_name"
+        android:textSize="@dimen/_20sp"
+        android:ellipsize="end"
+        android:layout_marginStart="@dimen/_20dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/imgVeg"
+        app:layout_constraintBottom_toBottomOf="@id/imgVeg"
+        app:layout_constraintStart_toEndOf="@id/txt_multiple"
+        app:layout_constraintEnd_toStartOf="@id/txt_meal_until_price"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:textSize="@dimen/_20sp"
+        android:textColor="@color/black"
+        android:id="@+id/txt_meal_until_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgVeg"
+        app:layout_constraintBottom_toBottomOf="@id/imgVeg"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

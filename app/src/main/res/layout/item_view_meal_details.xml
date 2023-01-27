@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_20dp"
+    android:fitsSystemWindows="true"
+    app:cardBackgroundColor="@color/black"
+    tools:context=".view.fragment.meal.mealdetails.MealDetailsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_ball_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="@dimen/_50dp"
+                android:id="@+id/btnFavorite"
+                android:layout_margin="@dimen/_5dp"
+                android:focusable="true"
+                android:textOn=""
+                android:textOff=""
+                android:clickable="true"
+                android:background="@drawable/favorite_button_bg" />
+            </FrameLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400dp"
+                android:id="@+id/cv_meal_details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardCornerRadius="@dimen/_20dp"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_meal_details_name"
+                        style="@style/TextMealNameLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_150dp"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Meal Name" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_Youtube"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_margin="@dimen/_10dp"
+                        android:src="@drawable/youtube"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_meal_details_name" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_meal_details_area"
+                        style="@style/TextMealName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area"
+                        android:textSize="@dimen/_30sp"
+
+                        app:layout_constraintBottom_toBottomOf="@id/img_Youtube"
+                        app:layout_constraintEnd_toStartOf="@id/txt_meal_details_rating"
+                        app:layout_constraintStart_toEndOf="@id/img_Youtube"
+                        app:layout_constraintTop_toTopOf="@id/img_Youtube" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_meal_details_rating"
+                        style="@style/TextMealPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_0dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:drawableStart="@drawable/ic_baseline_star_24_blue"
+                        android:drawablePadding="@dimen/_5dp"
+                        android:paddingTop="@dimen/_5dp"
+                        android:text="@string/rating"
+                        android:textSize="@dimen/_30sp"
+                        app:layout_constraintBottom_toBottomOf="@id/img_Youtube"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/img_Youtube" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_meal_details_desc"
+                        style="@style/TextMealDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0dp"
+                        android:ellipsize="end"
+                        android:maxLines="5"
+                        android:layout_margin="@dimen/_5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_Youtube"
+                        tools:text="Meal Description" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_200dp"
+            android:id="@+id/img_Meal_details"
+            android:background="@drawable/ic_launcher_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_80dp"
+            android:scaleType="centerCrop"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

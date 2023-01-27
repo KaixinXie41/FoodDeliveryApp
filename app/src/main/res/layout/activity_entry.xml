@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:id="@+id/container"
+    tools:context=".view.auth.entry.EntryActivity">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtWelcomeTitle"
+        android:text="@string/welcome"
+        android:textSize="@dimen/_80sp"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_100dp"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textColor="@color/orange_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:text="@string/register"
+        android:textSize="@dimen/_30sp"
+        android:padding="@dimen/_10dp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@drawable/btn_background"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcomeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:text="@string/login"
+        android:textSize="@dimen/_30sp"
+        android:paddingStart="@dimen/_40dp"
+        android:paddingEnd="@dimen/_40dp"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@drawable/btn_background"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister"
+        app:layout_constraintStart_toStartOf="@id/btnRegister"
+        app:layout_constraintEnd_toEndOf="@id/btnRegister"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtGuestEntry"
+        android:text="Guest Login"
+        android:fontFamily="cursive"
+        android:textSize="@dimen/_30sp"
+        android:textColor="@color/orange_dark"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

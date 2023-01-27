@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10dp"
+    tools:context=".view.activity.AboutMeActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgContact"
+        android:src="@drawable/contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_contact_title"
+        android:text="@string/contact_us"
+        style="@style/TextMealNameLarge"
+
+        android:layout_margin="@dimen/_10dp"
+        app:layout_constraintTop_toBottomOf="@id/imgContact"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_contact_info"
+        android:text="@string/info_title"
+        app:layout_constraintTop_toBottomOf="@id/txt_contact_title"
+        style="@style/TextMealDesc"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10dp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_contact_info_email"
+        android:text="@string/info_email"
+        app:layout_constraintTop_toBottomOf="@id/txt_contact_info"
+        style="@style/TextMealDesc"
+        android:textSize="@dimen/_25sp"
+        android:gravity="center"
+        android:layout_margin="@dimen/_20dp"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_contact_email"
+        android:text="@string/email_us"
+        android:layout_margin="@dimen/_20dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_contact_info_email"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/white"
+        style="@style/TextMealName"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_contact_info_phone"
+        android:text="@string/info_phone"
+        app:layout_constraintTop_toBottomOf="@id/btn_contact_email"
+        style="@style/TextMealDesc"
+        android:gravity="center"
+        android:drawableStart="@drawable/ic_baseline_perm_phone_msg_24"
+        android:textStyle="bold"
+        android:textSize="@dimen/_25sp"
+        android:layout_margin="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_10dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_contact_call"
+        android:text="@string/call_us"
+        android:layout_margin="@dimen/_20dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_contact_info_phone"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/white"
+        style="@style/TextMealName"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_contact_info_support_chat"
+        android:text="@string/info_support"
+        app:layout_constraintTop_toBottomOf="@id/btn_contact_call"
+        style="@style/TextMealDesc"
+        android:textSize="@dimen/_25sp"
+        android:gravity="center"
+        android:layout_margin="@dimen/_20dp"
+        android:drawableStart="@drawable/ic_baseline_support_agent_24"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_support_chat"
+        android:text="@string/chat_wiht_us"
+        android:layout_margin="@dimen/_20dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_contact_info_support_chat"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/white"
+        style="@style/TextMealName"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

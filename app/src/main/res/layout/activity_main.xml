@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout_main"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/frameLayout_full"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60dp"
+                    android:id="@+id/frameLayout_search"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/frameLayout_main"
+                    app:layout_constraintTop_toBottomOf="@id/frameLayout_search"
+                    app:layout_constraintBottom_toTopOf="@id/btmAppbar" />
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:icon="@drawable/ic_baseline_more_horiz_24"
+                    app:layout_constraintBottom_toTopOf="@id/btmAppbar"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_option_area"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_option"
+                    app:layout_constraintEnd_toStartOf="@id/btn_option"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_option_ingredient"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:src="@drawable/ic_baseline_liquor_24"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_option"
+                    app:layout_constraintEnd_toStartOf="@id/btn_option_area"/>
+
+                <com.google.android.material.bottomappbar.BottomAppBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btmAppbar"
+                    app:elevation="6dp"
+                    style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                    android:backgroundTint="@color/orange"
+                    app:menu="@menu/bottom_app_bar_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="BottomAppBar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:itemVerticalPadding="@dimen/_20dp"
+        app:itemIconSize="@dimen/_40dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:fitsSystemWindows="true"
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

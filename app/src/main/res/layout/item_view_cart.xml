@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_10dp"
+    android:layout_margin="@dimen/_10dp"
+    app:cardCornerRadius="@dimen/_10dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/meal_name"
+        style="@style/TextMealName"
+        android:textSize="@dimen/_17sp"
+        android:maxLength="16"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPrice"
+        tools:text ="@string/price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtMealName"
+        app:layout_constraintBottom_toBottomOf="@id/txtMealName"
+        style="@style/TextMealPrice"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginStart="@dimen/_30dp"
+        android:id="@+id/layout_add_meal_at_cart"
+        app:layout_constraintEnd_toStartOf="@id/txtPrice"
+        app:layout_constraintTop_toTopOf="@id/txtMealName"
+        app:layout_constraintBottom_toBottomOf="@id/txtMealName">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnPlus"
+            android:layout_width="@dimen/_25dp"
+            android:layout_height="@dimen/_25dp"
+            android:background="#0895F9"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnMin"
+            android:layout_width="@dimen/_25dp"
+            android:layout_height="@dimen/_25dp"
+            android:background="#0895F9"
+            android:src="@drawable/ic_baseline_remove_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMealCount"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnMin"
+            app:layout_constraintEnd_toStartOf="@id/btnPlus"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
